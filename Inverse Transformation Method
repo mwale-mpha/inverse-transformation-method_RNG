@@ -1,0 +1,19 @@
+
+set.seed(2021)
+invF <- function(u,lambda) -log(1-u)/lambda # Define inverse function
+u <- runif(5) # Simulate uniform observations (for example let's simulate 5)
+invF(u, lambda = 2) # Compute the inverse (assuming a lambda of 2)
+
+
+invF <- function(u,lambda) -log(1-u)/lambda # Definining inverse function of an exponential distribution
+mean <- 4
+lambda <- 1/mean
+
+u50 <- runif(50) # Simulating 50 uniform observations
+x <- invF(u50, lambda)# Computing the inverse 
+
+uT <- runif(1000) # Simulating 1000 uniform observations
+y <- invF(uT, lambda) # Computing the inverse 
+
+uTT <- runif(10000) # Simulating 10000 uniform observations
+z <- invF(uTT, lambda) # Computing the inverse 
